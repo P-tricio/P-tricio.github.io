@@ -85,22 +85,33 @@
       </a>
 
       <div class="hidden md:flex items-center gap-6 text-xs font-medium text-zinc-400">
-        <a href="#trayectoria" class="hover:text-zinc-200 transition">Trayectoria</a>
-        <a href="#domain" class="hover:text-zinc-200 transition">Dominio</a>
-        <a href="#proyectos" class="hover:text-zinc-200 transition">Proyectos</a>
-        <a href="#stack" class="hover:text-zinc-200 transition">Stack</a>
-        <a href="#terminal" class="hover:text-zinc-200 transition">Terminal</a>
-        <a href="#experiencia" class="hover:text-zinc-200 transition">Experiencia</a>
+        <a href="#trayectoria" data-i18n="nav_trayectoria" class="hover:text-zinc-200 transition">Trayectoria</a>
+        <a href="#domain" data-i18n="nav_domain" class="hover:text-zinc-200 transition">Dominio</a>
+        <a href="#proyectos" data-i18n="nav_proyectos" class="hover:text-zinc-200 transition">Proyectos</a>
+        <a href="#stack" data-i18n="nav_stack" class="hover:text-zinc-200 transition">Stack</a>
+        <a href="#terminal" data-i18n="nav_terminal" class="hover:text-zinc-200 transition">Terminal</a>
+        <a href="#experiencia" data-i18n="nav_experiencia" class="hover:text-zinc-200 transition">Experiencia</a>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
+        <!-- ELEGANT LANGUAGE SELECTOR (ES / EN) -->
+        <div class="inline-flex items-center p-0.5 rounded-lg bg-zinc-900 border border-zinc-800 text-[11px] font-mono">
+          <button id="lang-btn-es" onclick="setLanguage('es')" class="px-2 py-1 rounded-md font-semibold transition bg-zinc-800 text-white shadow-sm" title="Cambiar a Español">
+            ES
+          </button>
+          <button id="lang-btn-en" onclick="setLanguage('en')" class="px-2 py-1 rounded-md font-medium transition text-zinc-400 hover:text-zinc-200" title="Switch to English">
+            EN
+          </button>
+        </div>
+
         <div class="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-mono">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          Remoto
+          <span data-i18n="nav_remote">Remoto</span>
         </div>
-        <a href="CV_Patricio_Escalona_Becerra.pdf" download class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-zinc-100 hover:bg-white text-zinc-900 text-xs font-semibold transition">
+
+        <a href="CV_Patricio_Escalona_Becerra.pdf" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-zinc-100 hover:bg-white text-zinc-900 text-xs font-semibold transition">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>CV (PDF)</span>
+          <span data-i18n="nav_cv_btn">CV (PDF)</span>
         </a>
       </div>
     </div>
@@ -111,14 +122,14 @@
     <div class="flex flex-col lg:flex-row gap-10 items-start justify-between">
       <div class="max-w-xl">
         <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-mono mb-6">
-          <span class="text-emerald-400 font-bold">●</span> Full-Stack Developer · AI Applications
+          <span class="text-emerald-400 font-bold">●</span> <span data-i18n="hero_badge">Desarrollador Full-Stack · Aplicaciones con IA</span>
         </div>
 
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mb-5">
+        <h1 data-i18n="hero_title" class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mb-5">
           Desarrollador Full-Stack con foco en aplicaciones web, IA y visión de producto.
         </h1>
 
-        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+        <p data-i18n-html="hero_description" class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
           Base sólida en <strong class="text-zinc-200 font-semibold">JavaScript (ES6+), React, Node.js y Firebase</strong>. Combino más de 800h de formación técnica con experiencia previa liderando equipos distribuidos de <span class="text-zinc-200 font-semibold">40 personas</span>, taxonomías de datos y productos desplegados con usuarios reales.
         </p>
 
@@ -126,7 +137,7 @@
         <div class="flex flex-wrap items-center gap-3 mb-8">
           <a href="#proyectos" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-xs transition">
             <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
-            <span>Ver Proyectos</span>
+            <span data-i18n="hero_btn_projects">Ver Proyectos</span>
           </a>
           <a href="https://github.com/P-tricio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-medium transition font-mono">
             <i data-lucide="github" class="w-3.5 h-3.5"></i>
@@ -142,19 +153,19 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-zinc-800/80">
           <div>
             <div class="text-2xl font-bold text-white font-mono">35+</div>
-            <div class="text-xs text-zinc-400 mt-0.5">Usuarios reales (Pachangapp)</div>
+            <div data-i18n="metric_1" class="text-xs text-zinc-400 mt-0.5">Usuarios reales (Pachangapp)</div>
           </div>
           <div>
             <div class="text-2xl font-bold text-zinc-200 font-mono">40</div>
-            <div class="text-xs text-zinc-400 mt-0.5">Especialistas liderados (4TIUS)</div>
+            <div data-i18n="metric_2" class="text-xs text-zinc-400 mt-0.5">Especialistas liderados (4TIUS)</div>
           </div>
           <div>
             <div class="text-2xl font-bold text-zinc-200 font-mono">+800h</div>
-            <div class="text-xs text-zinc-400 mt-0.5">Ingeniería Web (HACK A BOSS)</div>
+            <div data-i18n="metric_3" class="text-xs text-zinc-400 mt-0.5">Ingeniería Web (HACK A BOSS)</div>
           </div>
           <div>
             <div class="text-2xl font-bold text-zinc-200 font-mono">6</div>
-            <div class="text-xs text-zinc-400 mt-0.5">Repositorios y apps activas</div>
+            <div data-i18n="metric_4" class="text-xs text-zinc-400 mt-0.5">Repositorios y apps activas</div>
           </div>
         </div>
       </div>
@@ -177,28 +188,7 @@
           </div>
 
           <!-- VS Code Editor Body with syntax highlighting -->
-          <pre class="p-4 bg-[#141416] leading-relaxed overflow-x-auto text-[11px]"><code><span class="text-[#858585]">// Candidate definition</span>
-{
-  <span class="text-[#9cdcfe]">"name"</span>: <span class="text-[#ce9178]">"Patricio Escalona"</span>,
-  <span class="text-[#9cdcfe]">"role"</span>: <span class="text-[#ce9178]">"Full-Stack Developer"</span>,
-  <span class="text-[#9cdcfe]">"primary_stack"</span>: [
-    <span class="text-[#ce9178]">"JavaScript (ES6+)"</span>,
-    <span class="text-[#ce9178]">"React 19"</span>,
-    <span class="text-[#ce9178]">"Node.js"</span>,
-    <span class="text-[#ce9178]">"Firebase / Firestore"</span>
-  ],
-  <span class="text-[#9cdcfe]">"ai_capabilities"</span>: [
-    <span class="text-[#ce9178]">"Google Gemini SDK"</span>,
-    <span class="text-[#ce9178]">"OpenAI API"</span>,
-    <span class="text-[#ce9178]">"Tool Calling & Autonomous Agents"</span>
-  ],
-  <span class="text-[#9cdcfe]">"unfair_advantage"</span>: {
-    <span class="text-[#9cdcfe]">"leadership"</span>: <span class="text-[#b5cea8]">40</span>, <span class="text-[#6a9955]">// Remote specialists led</span>
-    <span class="text-[#9cdcfe]">"domain_expert"</span>: <span class="text-[#4ec9b0]">true</span>, <span class="text-[#6a9955]">// CAFD / HealthTech</span>
-    <span class="text-[#9cdcfe]">"product_mindset"</span>: <span class="text-[#ce9178]">"Shipped apps with active users"</span>
-  },
-  <span class="text-[#9cdcfe]">"status"</span>: <span class="text-[#4ec9b0]">"READY_FOR_INTERVIEWS"</span>
-}</code></pre>
+          <pre class="p-4 bg-[#141416] leading-relaxed overflow-x-auto text-[11px]"><code id="manifest-code"></code></pre>
         </div>
       </div>
     </div>
@@ -207,39 +197,39 @@
   <!-- TRAYECTORIA SECTION -->
   <section id="trayectoria" class="max-w-5xl mx-auto px-4 sm:px-8 py-16 border-b border-zinc-800/60">
     <div class="mb-10">
-      <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Trayectoria & Diferenciación</h2>
-      <p class="text-xl sm:text-2xl font-bold text-white">Ingeniería, datos y experiencia de gestión real</p>
+      <h2 data-i18n="trayectoria_tag" class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Trayectoria & Diferenciación</h2>
+      <p data-i18n="trayectoria_title" class="text-xl sm:text-2xl font-bold text-white">Ingeniería, datos y experiencia de gestión real</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="card-solid rounded-xl p-5">
-        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">01 / CIENCIA & MÉTODO</div>
-        <h3 class="font-semibold text-white text-sm mb-2">Ciencias del Deporte (UGR)</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">
+        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">01 / <span data-i18n="step1_tag">CIENCIA & MÉTODO</span></div>
+        <h3 data-i18n="step1_title" class="font-semibold text-white text-sm mb-2">Ciencias del Deporte (UGR)</h3>
+        <p data-i18n="step1_desc" class="text-zinc-400 text-xs leading-relaxed">
           Licenciatura y Máster en Educación. Rigor metodológico, optimización sistemática y capacidad pedagógica para estructurar problemas complejos.
         </p>
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">02 / DATOS & EQUIPOS</div>
-        <h3 class="font-semibold text-white text-sm mb-2">Liderazgo en 4TIUS (40 pax)</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">
+        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">02 / <span data-i18n="step2_tag">DATOS & EQUIPOS</span></div>
+        <h3 data-i18n="step2_title" class="font-semibold text-white text-sm mb-2">Liderazgo en 4TIUS (40 pax)</h3>
+        <p data-i18n="step2_desc" class="text-zinc-400 text-xs leading-relaxed">
           Dirección remota de 40 especialistas para modelar taxonomías de ejercicios y bases de datos estructuradas para motores algorítmicos.
         </p>
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">03 / INGENIERÍA CORE</div>
-        <h3 class="font-semibold text-white text-sm mb-2">HACK A BOSS (+800h)</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">
+        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">03 / <span data-i18n="step3_tag">INGENIERÍA CORE</span></div>
+        <h3 data-i18n="step3_title" class="font-semibold text-white text-sm mb-2">HACK A BOSS (+800h)</h3>
+        <p data-i18n="step3_desc" class="text-zinc-400 text-xs leading-relaxed">
           Bases sólidas de desarrollo tradicional con JavaScript, React, Node.js, Express, bases de datos SQL relacionales y APIs RESTful.
         </p>
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">04 / PRODUCTO & IA</div>
-        <h3 class="font-semibold text-white text-sm mb-2">2befit & Proyectos con IA</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">
+        <div class="text-zinc-400 font-mono text-xs font-semibold mb-2">04 / <span data-i18n="step4_tag">PRODUCTO & IA</span></div>
+        <h3 data-i18n="step4_title" class="font-semibold text-white text-sm mb-2">2befit & Proyectos con IA</h3>
+        <p data-i18n="step4_desc" class="text-zinc-400 text-xs leading-relaxed">
           Construcción de software para resolver problemas operativos reales utilizando Gemini AI, OpenAI, Firebase en tiempo real y Vercel.
         </p>
       </div>
@@ -252,38 +242,38 @@
       <div class="flex flex-col lg:flex-row items-start justify-between gap-6">
         <div class="max-w-2xl">
           <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-zinc-800 text-zinc-300 text-xs font-mono mb-3">
-            <span>DOMAIN EXPERTISE</span>
+            <span data-i18n="domain_badge">DOMAIN EXPERTISE · VENTAJA COMPETITIVA</span>
           </div>
 
-          <h2 class="text-xl sm:text-2xl font-bold text-white mb-3">
-            FitnessTech, HealthTech & Human Performance
+          <h2 data-i18n="domain_title" class="text-xl sm:text-2xl font-bold text-white mb-3">
+            FitnessTech, HealthTech & Rendimiento Humano
           </h2>
 
-          <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-4">
+          <p data-i18n="domain_desc" class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-4">
             Formación académica en Ciencias de la Actividad Física y del Deporte combinada con experiencia profesional en rendimiento y salud. Este conocimiento me permite entender las necesidades reales de usuario, los flujos de adherencia y la taxonomía de datos detrás de cada producto.
           </p>
 
-          <div class="text-xs font-mono text-zinc-300 bg-zinc-950/80 border-l-2 border-zinc-400 px-3.5 py-2 rounded-r mb-5">
-            &ldquo;I don't just write code for a domain I don't know — I bring domain expertise in human performance and health directly into the product itself.&rdquo;
+          <div data-i18n="domain_quote" class="text-xs font-mono text-zinc-300 bg-zinc-950/80 border-l-2 border-zinc-400 px-3.5 py-2 rounded-r mb-5">
+            &ldquo;No desarrollo software para un dominio que desconozco: aporto conocimiento experto en rendimiento humano y salud directamente a la arquitectura del producto.&rdquo;
           </div>
 
           <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">HealthTech</span>
-            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">FitnessTech</span>
-            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">SportsTech</span>
-            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">Wearables & Metrics</span>
-            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">AI Applied to Health</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">#HealthTech</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">#FitnessTech</span>
+            <span class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">#SportsTech</span>
+            <span data-i18n="domain_tag_wearables" class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">#Wearables & Métricas</span>
+            <span data-i18n="domain_tag_ai" class="px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800">#IA Aplicada a Salud</span>
           </div>
         </div>
 
         <div class="w-full lg:w-64 shrink-0 space-y-3 font-mono text-xs">
           <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
-            <div class="text-zinc-200 font-semibold mb-1">Comprensión de Usuario</div>
-            <div class="text-zinc-400 text-[11px]">Diseño de UX y flujos adaptados a la psicología real de entrenamiento y hábitos.</div>
+            <div data-i18n="domain_card1_title" class="text-zinc-200 font-semibold mb-1">Comprensión de Usuario</div>
+            <div data-i18n="domain_card1_desc" class="text-zinc-400 text-[11px]">Diseño de UX y flujos adaptados a la psicología real de entrenamiento y hábitos.</div>
           </div>
           <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
-            <div class="text-zinc-200 font-semibold mb-1">Criterio de Datos</div>
-            <div class="text-zinc-400 text-[11px]">Estructuración rigurosa de biomarcadores, nutrición y carga física.</div>
+            <div data-i18n="domain_card2_title" class="text-zinc-200 font-semibold mb-1">Criterio de Datos</div>
+            <div data-i18n="domain_card2_desc" class="text-zinc-400 text-[11px]">Estructuración rigurosa de biomarcadores, nutrición y carga física.</div>
           </div>
         </div>
       </div>
@@ -294,11 +284,11 @@
   <section id="proyectos" class="max-w-5xl mx-auto px-4 sm:px-8 py-16 border-b border-zinc-800/60">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
       <div>
-        <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Evidencia Técnica</h2>
-        <p class="text-xl sm:text-2xl font-bold text-white">Proyectos funcionales con código abierto</p>
+        <h2 data-i18n="projects_tag" class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Evidencia Técnica</h2>
+        <p data-i18n="projects_title" class="text-xl sm:text-2xl font-bold text-white">Proyectos funcionales con código abierto</p>
       </div>
       <a href="https://github.com/P-tricio" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-300 hover:text-white transition font-mono">
-        <span>Ver todos en GitHub</span>
+        <span data-i18n="projects_all_gh">Ver todos en GitHub</span>
         <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
       </a>
     </div>
@@ -310,7 +300,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 35+ Usuarios
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> <span data-i18n="proj1_badge">En Producción · 35+ Usuarios</span>
             </span>
             <a href="https://github.com/P-tricio/Pachangapp" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -318,16 +308,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">Pachangapp</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">Sports League & Community PWA</p>
+          <p data-i18n="proj1_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">PWA Comunitaria & Gestor de Ligas Deportivas</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj1_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             PWA en producción utilizada por más de 35 jugadores para organizar partidos, rankings competitivos en tiempo real y votaciones post-partido.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• Firebase Firestore + Auth en tiempo real</div>
-            <div>• Panel de administración con roles RBAC</div>
-            <div>• Animaciones con Framer Motion</div>
+            <div>• <span data-i18n="proj1_b1">Firebase Firestore + Auth en tiempo real</span></div>
+            <div>• <span data-i18n="proj1_b2">Panel de administración con roles RBAC</span></div>
+            <div>• <span data-i18n="proj1_b3">Animaciones con Framer Motion</span></div>
           </div>
         </div>
 
@@ -340,7 +330,7 @@
           </div>
           <a href="https://github.com/P-tricio/Pachangapp" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Repo</span>
+            <span data-i18n="proj_btn_repo">Repositorio GitHub</span>
           </a>
         </div>
       </div>
@@ -350,7 +340,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              TypeScript · Offline-First
+              <span data-i18n="proj2_badge">TypeScript · Offline-First</span>
             </span>
             <a href="https://github.com/P-tricio/nido-app" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -358,16 +348,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">Nido App</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">Family & Health Tracker PWA</p>
+          <p data-i18n="proj2_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">PWA de Seguimiento Biométrico e Hitos Familiares</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj2_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             PWA en TypeScript estricto para seguimiento biométrico e hitos infantiles con sincronización en tiempo real y soporte multiusuario de hogares.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• Firebase Cloud Messaging (FCM) push</div>
-            <div>• Arquitectura Offline-First con SyncBadge</div>
-            <div>• Tests automatizados con Vitest</div>
+            <div>• <span data-i18n="proj2_b1">Firebase Cloud Messaging (FCM) push</span></div>
+            <div>• <span data-i18n="proj2_b2">Arquitectura Offline-First con SyncBadge</span></div>
+            <div>• <span data-i18n="proj2_b3">Tests automatizados con Vitest</span></div>
           </div>
         </div>
 
@@ -380,7 +370,7 @@
           </div>
           <a href="https://github.com/P-tricio/nido-app" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Repo</span>
+            <span data-i18n="proj_btn_repo">Repositorio GitHub</span>
           </a>
         </div>
       </div>
@@ -390,7 +380,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              IA Generativa & APIs
+              <span data-i18n="proj3_badge">IA Generativa & APIs</span>
             </span>
             <a href="https://github.com/P-tricio/2befitHub" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -398,16 +388,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">2befit Hub</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">AI-Powered Health Platform</p>
+          <p data-i18n="proj3_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">Plataforma HealthTech con IA & Métricas</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj3_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             Plataforma PWA para la gestión de hábitos y entrenamiento que integra Google Gemini AI para análisis asistido y lector óptico de códigos de barras.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• Google Gemini AI SDK integrado</div>
-            <div>• 4 APIs de datos nutricionales REST</div>
-            <div>• Métricas visuales con Recharts</div>
+            <div>• <span data-i18n="proj3_b1">Google Gemini AI SDK integrado</span></div>
+            <div>• <span data-i18n="proj3_b2">4 APIs de datos nutricionales REST</span></div>
+            <div>• <span data-i18n="proj3_b3">Métricas visuales con Recharts</span></div>
           </div>
         </div>
 
@@ -420,7 +410,7 @@
           </div>
           <a href="https://github.com/P-tricio/2befitHub" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Repo</span>
+            <span data-i18n="proj_btn_repo">Repositorio GitHub</span>
           </a>
         </div>
       </div>
@@ -430,7 +420,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              Agente Autónomo
+              <span data-i18n="proj4_badge">Agente Autónomo</span>
             </span>
             <a href="https://github.com/P-tricio/whatsapp-agent" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -438,16 +428,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">WhatsApp AI Agent</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">Backend & Tool-Calling</p>
+          <p data-i18n="proj4_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">Backend & Integración con Tool-Calling</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj4_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             Servicio backend en Node.js/Express con OpenAI API y Supabase para cualificar consultas de clientes y agendar citas en tiempo real con Google Calendar.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• Memoria contextual en PostgreSQL (Supabase)</div>
-            <div>• Tool Calling con Google Calendar API</div>
-            <div>• Despliegue en VPS Hetzner con Coolify</div>
+            <div>• <span data-i18n="proj4_b1">Memoria contextual en PostgreSQL (Supabase)</span></div>
+            <div>• <span data-i18n="proj4_b2">Tool Calling con Google Calendar API</span></div>
+            <div>• <span data-i18n="proj4_b3">Despliegue en VPS Hetzner con Coolify</span></div>
           </div>
         </div>
 
@@ -460,7 +450,7 @@
           </div>
           <a href="https://github.com/P-tricio/whatsapp-agent" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Repo</span>
+            <span data-i18n="proj_btn_repo">Repositorio GitHub</span>
           </a>
         </div>
       </div>
@@ -470,7 +460,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              Landing Web & UI
+              <span data-i18n="proj5_badge">Landing Web & UI</span>
             </span>
             <a href="https://github.com/P-tricio/2BEFIT" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -478,16 +468,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">2befit Web Platform</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">Modern Landing Architecture</p>
+          <p data-i18n="proj5_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">Arquitectura de Landing Moderna</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj5_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             Plataforma web de captación y presentación de servicios construida con React 19, Tailwind CSS v4, animaciones con Framer Motion y multi-idioma con i18next.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• React 19 + Tailwind CSS v4</div>
-            <div>• Animaciones fluidas con Framer Motion</div>
-            <div>• Internacionalización integrada con i18next</div>
+            <div>• <span data-i18n="proj5_b1">React 19 + Tailwind CSS v4</span></div>
+            <div>• <span data-i18n="proj5_b2">Animaciones fluidas con Framer Motion</span></div>
+            <div>• <span data-i18n="proj5_b3">Internacionalización integrada con i18next</span></div>
           </div>
         </div>
 
@@ -500,7 +490,7 @@
           </div>
           <a href="https://github.com/P-tricio/2BEFIT" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Repo</span>
+            <span data-i18n="proj_btn_repo">Repositorio GitHub</span>
           </a>
         </div>
       </div>
@@ -510,7 +500,7 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-[11px] font-mono">
-              Headless Multimedia
+              <span data-i18n="proj6_badge">Multimedia Headless</span>
             </span>
             <a href="https://github.com/P-tricio" target="_blank" class="text-zinc-400 hover:text-white transition">
               <i data-lucide="github" class="w-4 h-4"></i>
@@ -518,16 +508,16 @@
           </div>
 
           <h3 class="text-base font-bold text-white mb-0.5">HyperFrames Engine</h3>
-          <p class="text-xs text-zinc-400 font-mono mb-2.5">Server-Side Video Renderer</p>
+          <p data-i18n="proj6_subtitle" class="text-xs text-zinc-400 font-mono mb-2.5">Motor de Renderizado de Vídeo en Servidor</p>
           
-          <p class="text-zinc-400 text-xs leading-relaxed mb-4">
+          <p data-i18n="proj6_desc" class="text-zinc-400 text-xs leading-relaxed mb-4">
             Motor de renderizado de vídeo headless en Node.js a 1080x1920 30fps para composición automatizada de vídeo con sincronización de audio multicapa.
           </p>
 
           <div class="space-y-1 text-xs text-zinc-300 mb-4">
-            <div>• Puppeteer + Canvas + GSAP fotograma a fotograma</div>
-            <div>• Sincronización precisa de diseño de sonido</div>
-            <div>• Pipelines agénticos automatizados</div>
+            <div>• <span data-i18n="proj6_b1">Puppeteer + Canvas + GSAP fotograma a fotograma</span></div>
+            <div>• <span data-i18n="proj6_b2">Sincronización precisa de diseño de sonido</span></div>
+            <div>• <span data-i18n="proj6_b3">Pipelines agénticos automatizados</span></div>
           </div>
         </div>
 
@@ -540,7 +530,7 @@
           </div>
           <a href="https://github.com/P-tricio" target="_blank" class="w-full py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono flex items-center justify-center gap-1.5 transition">
             <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span>GitHub Profile</span>
+            <span data-i18n="proj_btn_profile">Perfil GitHub</span>
           </a>
         </div>
       </div>
@@ -551,8 +541,8 @@
   <!-- VS CODE INTEGRATED TERMINAL SECTION -->
   <section id="terminal" class="max-w-4xl mx-auto px-4 sm:px-8 py-16 border-b border-zinc-800/60">
     <div class="mb-8 text-center sm:text-left">
-      <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Terminal de Desarrollo</h2>
-      <p class="text-xl font-bold text-white">Inspección interactiva de perfil (VS Code Terminal)</p>
+      <h2 data-i18n="terminal_tag" class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Terminal de Desarrollo</h2>
+      <p data-i18n="terminal_title" class="text-xl font-bold text-white">Inspección interactiva de perfil (VS Code Terminal)</p>
     </div>
 
     <!-- VS Code Window Container -->
@@ -562,11 +552,11 @@
         <div class="flex items-center gap-4 text-[11px]">
           <span class="text-white border-b-2 border-[#007acc] pb-1 font-semibold flex items-center gap-1.5">
             <i data-lucide="terminal" class="w-3.5 h-3.5 text-[#007acc]"></i>
-            TERMINAL
+            <span data-i18n="terminal_tab_main">TERMINAL</span>
           </span>
-          <span class="text-zinc-400 hover:text-zinc-300 cursor-default">OUTPUT</span>
-          <span class="text-zinc-400 hover:text-zinc-300 cursor-default">DEBUG CONSOLE</span>
-          <span class="text-zinc-400 hover:text-zinc-300 cursor-default">PORTS</span>
+          <span data-i18n="terminal_tab_output" class="text-zinc-400 hover:text-zinc-300 cursor-default">SALIDA</span>
+          <span data-i18n="terminal_tab_debug" class="text-zinc-400 hover:text-zinc-300 cursor-default">CONSOLA DEPURACIÓN</span>
+          <span data-i18n="terminal_tab_ports" class="text-zinc-400 hover:text-zinc-300 cursor-default">PUERTOS</span>
         </div>
         <div class="flex items-center gap-3 text-[11px]">
           <span class="text-zinc-300 flex items-center gap-1.5 bg-[#27272a] px-2 py-0.5 rounded">
@@ -584,37 +574,24 @@
       <div class="bg-[#141416] px-4 py-2.5 border-b border-zinc-800/80 flex flex-wrap items-center gap-2 text-[11px]">
         <span class="text-zinc-400 flex items-center gap-1">
           <i data-lucide="play" class="w-3 h-3 text-emerald-400 fill-emerald-400"></i>
-          <span>Scripts:</span>
+          <span data-i18n="terminal_scripts_label">Scripts:</span>
         </span>
         <button onclick="runCli('quien-soy')" class="px-2.5 py-1 rounded bg-[#27272a] hover:bg-[#3f3f46] text-[#9cdcfe] hover:text-white border border-zinc-700 transition flex items-center gap-1">
-          <span class="text-[#ce9178]">./</span>quien-soy.sh
+          <span class="text-[#ce9178]">./</span><span data-i18n="script_btn_1">quien-soy.sh</span>
         </button>
         <button onclick="runCli('stack')" class="px-2.5 py-1 rounded bg-[#27272a] hover:bg-[#3f3f46] text-[#dcdcaa] hover:text-white border border-zinc-700 transition flex items-center gap-1">
-          <span class="text-[#ce9178]">./</span>stack.sh
+          <span class="text-[#ce9178]">./</span><span data-i18n="script_btn_2">stack.sh</span>
         </button>
         <button onclick="runCli('liderazgo')" class="px-2.5 py-1 rounded bg-[#27272a] hover:bg-[#3f3f46] text-[#4ec9b0] hover:text-white border border-zinc-700 transition flex items-center gap-1">
-          <span class="text-[#ce9178]">./</span>liderazgo-datos.sh
+          <span class="text-[#ce9178]">./</span><span data-i18n="script_btn_3">liderazgo-datos.sh</span>
         </button>
         <button onclick="runCli('por-que-contratar')" class="px-2.5 py-1 rounded bg-[#27272a] hover:bg-[#3f3f46] text-[#c586c0] hover:text-white border border-zinc-700 transition flex items-center gap-1">
-          <span class="text-[#ce9178]">./</span>por-que-contratar.sh
+          <span class="text-[#ce9178]">./</span><span data-i18n="script_btn_4">por-que-contratar.sh</span>
         </button>
       </div>
 
       <!-- Terminal Output Screen -->
       <div id="cli-output" class="p-5 text-zinc-300 space-y-3 min-h-[220px] bg-[#0c0c0e] overflow-x-auto leading-relaxed">
-        <div class="flex items-center gap-2 text-xs flex-wrap">
-          <span class="text-[#4ec9b0]">➜</span>
-          <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
-          <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
-          <span class="text-[#6a9955]">✔</span>
-          <span class="text-white font-bold">patricio --status</span>
-        </div>
-        <div class="text-[#4ec9b0] font-semibold flex items-center gap-1.5">
-          <span>✔</span> <span>[SYSTEM_READY]</span> <span class="text-zinc-200">Perfil verificado y disponible para procesos de selección técnicos.</span>
-        </div>
-        <div class="text-[#858585] text-[11px] pl-4 border-l border-zinc-800">
-          <span class="text-[#6a9955]">// Haz clic en los scripts superiores para ejecutar diagnósticos sobre el candidato.</span>
-        </div>
       </div>
     </div>
   </section>
@@ -622,25 +599,25 @@
   <!-- TECH STACK SECTION -->
   <section id="stack" class="max-w-5xl mx-auto px-4 sm:px-8 py-16 border-b border-zinc-800/60">
     <div class="mb-10 text-center sm:text-left">
-      <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Stack Técnico</h2>
-      <p class="text-xl sm:text-2xl font-bold text-white">Tecnologías probadas en producción</p>
+      <h2 data-i18n="stack_tag" class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Stack Técnico</h2>
+      <p data-i18n="stack_title" class="text-xl sm:text-2xl font-bold text-white">Tecnologías probadas en producción</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="card-solid rounded-xl p-5">
-        <h3 class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Frontend & Web</h3>
+        <h3 data-i18n="stack_cat1" class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Frontend & Web</h3>
         <ul class="space-y-1.5 text-xs text-zinc-400 font-mono">
           <li class="text-zinc-200 font-semibold">• JavaScript (ES6+)</li>
           <li class="text-zinc-200 font-semibold">• React 19</li>
           <li>• TypeScript</li>
-          <li>• PWAs & Offline Caching</li>
+          <li data-i18n="stack_pwa">• PWAs & Caché Offline</li>
           <li>• Tailwind CSS & Framer Motion</li>
           <li>• Recharts</li>
         </ul>
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <h3 class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Backend & Cloud</h3>
+        <h3 data-i18n="stack_cat2" class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Backend & Cloud</h3>
         <ul class="space-y-1.5 text-xs text-zinc-400 font-mono">
           <li class="text-zinc-200 font-semibold">• Node.js & Express</li>
           <li class="text-zinc-200 font-semibold">• Firebase (Firestore, FCM, Auth)</li>
@@ -652,26 +629,26 @@
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <h3 class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">IA Aplicada</h3>
+        <h3 data-i18n="stack_cat3" class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">IA Aplicada</h3>
         <ul class="space-y-1.5 text-xs text-zinc-400 font-mono">
           <li class="text-zinc-200 font-semibold">• Google Gemini SDK</li>
           <li class="text-zinc-200 font-semibold">• OpenAI API</li>
           <li>• Tool Calling & Webhooks</li>
-          <li>• Agentes con Memoria Persistente</li>
+          <li data-i18n="stack_agents">• Agentes con Memoria Persistente</li>
           <li>• n8n Automatización</li>
-          <li>• Desarrollo asistido con IA</li>
+          <li data-i18n="stack_ai_dev">• Desarrollo asistido con IA</li>
         </ul>
       </div>
 
       <div class="card-solid rounded-xl p-5">
-        <h3 class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Calidad & Datos</h3>
+        <h3 data-i18n="stack_cat4" class="font-mono text-xs font-semibold text-zinc-300 mb-3 uppercase tracking-wider">Calidad & Datos</h3>
         <ul class="space-y-1.5 text-xs text-zinc-400 font-mono">
           <li class="text-zinc-200 font-semibold">• Vitest (Unit Testing)</li>
           <li>• React Testing Library</li>
           <li class="text-zinc-200 font-semibold">• Git & GitHub</li>
-          <li>• Curación y Taxonomía de Datos</li>
-          <li>• Clean Code & Modularidad</li>
-          <li>• Gestión de Equipos Remotos</li>
+          <li data-i18n="stack_data">• Curación y Taxonomía de Datos</li>
+          <li data-i18n="stack_clean">• Clean Code & Modularidad</li>
+          <li data-i18n="stack_team">• Gestión de Equipos Remotos</li>
         </ul>
       </div>
     </div>
@@ -680,20 +657,20 @@
   <!-- EXPERIENCIA SECTION -->
   <section id="experiencia" class="max-w-4xl mx-auto px-4 sm:px-8 py-16 border-b border-zinc-800/60">
     <div class="mb-10 text-center sm:text-left">
-      <h2 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Trayectoria Profesional</h2>
-      <p class="text-xl sm:text-2xl font-bold text-white">Experiencia laboral & Formación</p>
+      <h2 data-i18n="exp_tag" class="text-xs font-semibold text-zinc-400 uppercase tracking-wider font-mono mb-1">Trayectoria Profesional</h2>
+      <p data-i18n="exp_title" class="text-xl sm:text-2xl font-bold text-white">Experiencia laboral & Formación</p>
     </div>
 
     <div class="space-y-4">
       <div class="card-solid rounded-xl p-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
           <div>
-            <h3 class="text-sm font-bold text-white">Founder & Full-Stack Developer</h3>
+            <h3 data-i18n="exp1_role" class="text-sm font-bold text-white">Founder & Full-Stack Developer</h3>
             <span class="text-xs text-zinc-400">2befit</span>
           </div>
-          <span class="text-xs text-zinc-400 font-mono">Mayo 2023 – Presente</span>
+          <span data-i18n="exp1_date" class="text-xs text-zinc-400 font-mono">Mayo 2023 – Presente</span>
         </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
+        <p data-i18n="exp1_desc" class="text-xs text-zinc-400 leading-relaxed">
           Diseño y desarrollo de herramientas web propias (PWAs en React y Firebase) para clientes reales, integrando Gemini API y automatizaciones para escalar el servicio.
         </p>
       </div>
@@ -701,12 +678,12 @@
       <div class="card-solid rounded-xl p-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
           <div>
-            <h3 class="text-sm font-bold text-white">Director de Contenidos & Datos</h3>
-            <span class="text-xs text-zinc-400">4TIUS (Startup Tecnológica / Wellness)</span>
+            <h3 data-i18n="exp2_role" class="text-sm font-bold text-white">Director de Contenidos & Datos</h3>
+            <span data-i18n="exp2_company" class="text-xs text-zinc-400">4TIUS (Startup Tecnológica / Wellness)</span>
           </div>
-          <span class="text-xs text-zinc-400 font-mono">Marzo 2015 – Abril 2017</span>
+          <span data-i18n="exp2_date" class="text-xs text-zinc-400 font-mono">Marzo 2015 – Abril 2017</span>
         </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
+        <p data-i18n-html="exp2_desc" class="text-xs text-zinc-400 leading-relaxed">
           Dirección y coordinación remota de un equipo distribuido de <strong>40 especialistas</strong> para el modelado, etiquetado y diseño de ontologías de ejercicios para motores de recomendación.
         </p>
       </div>
@@ -714,12 +691,12 @@
       <div class="card-solid rounded-xl p-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
           <div>
-            <h3 class="text-sm font-bold text-white">Full-Stack Developer (Formación Técnica)</h3>
+            <h3 data-i18n="exp3_role" class="text-sm font-bold text-white">Full-Stack Developer (Formación Técnica)</h3>
             <span class="text-xs text-zinc-400">HACK A BOSS</span>
           </div>
-          <span class="text-xs text-zinc-400 font-mono">Noviembre 2024 – Abril 2025</span>
+          <span data-i18n="exp3_date" class="text-xs text-zinc-400 font-mono">Noviembre 2024 – Abril 2025</span>
         </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
+        <p data-i18n="exp3_desc" class="text-xs text-zinc-400 leading-relaxed">
           Más de 800 horas de formación técnica intensiva centradas en JavaScript (ES6+), React, Node.js, Express, SQL relacional y arquitectura de software.
         </p>
       </div>
@@ -729,15 +706,15 @@
   <!-- FOOTER -->
   <footer class="py-16 px-4 sm:px-8">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Contacto</h2>
-      <p class="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto mb-6">
+      <h2 data-i18n="footer_title" class="text-xl sm:text-2xl font-bold text-white mb-2">Contacto</h2>
+      <p data-i18n="footer_desc" class="text-zinc-400 text-xs sm:text-sm max-w-lg mx-auto mb-6">
         Disponible para posiciones en remoto como Full-Stack Developer, Frontend Developer o Software Engineer con foco en producto e IA.
       </p>
 
       <div class="flex flex-wrap justify-center items-center gap-3 mb-10">
         <a href="mailto:patricioescabe@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-xs transition">
           <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-          <span>Enviar Email</span>
+          <span data-i18n="footer_btn_email">Enviar Email</span>
         </a>
         <a href="https://linkedin.com/in/patricio-escalona-becerra-b94a8b48" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono transition">
           <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
@@ -745,7 +722,7 @@
         </a>
         <a href="CV_Patricio_Escalona_Becerra.pdf" download class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-mono transition">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>CV (PDF)</span>
+          <span data-i18n="footer_btn_cv">CV (PDF)</span>
         </a>
       </div>
 
@@ -761,12 +738,381 @@
     <span id="toast-msg">Email copiado</span>
   </div>
 
+  <!-- I18N DICTIONARY & LOGIC -->
   <script>
-    lucide.createIcons();
+    let currentLang = 'es';
+    let currentCliCmd = 'status';
+
+    const translations = {
+      es: {
+        nav_trayectoria: "Trayectoria",
+        nav_domain: "Dominio",
+        nav_proyectos: "Proyectos",
+        nav_stack: "Stack",
+        nav_terminal: "Terminal",
+        nav_experiencia: "Experiencia",
+        nav_remote: "Remoto",
+        nav_cv_btn: "CV (PDF)",
+
+        hero_badge: "Desarrollador Full-Stack · Aplicaciones con IA",
+        hero_title: "Desarrollador Full-Stack con foco en aplicaciones web, IA y visión de producto.",
+        hero_description: 'Base sólida en <strong class="text-zinc-200 font-semibold">JavaScript (ES6+), React, Node.js y Firebase</strong>. Combino más de 800h de formación técnica con experiencia previa liderando equipos distribuidos de <span class="text-zinc-200 font-semibold">40 personas</span>, taxonomías de datos y productos desplegados con usuarios reales.',
+        hero_btn_projects: "Ver Proyectos",
+        metric_1: "Usuarios reales (Pachangapp)",
+        metric_2: "Especialistas liderados (4TIUS)",
+        metric_3: "Ingeniería Web (HACK A BOSS)",
+        metric_4: "Repositorios y apps activas",
+
+        trayectoria_tag: "Trayectoria & Diferenciación",
+        trayectoria_title: "Ingeniería, datos y experiencia de gestión real",
+        step1_tag: "CIENCIA & MÉTODO",
+        step1_title: "Ciencias del Deporte (UGR)",
+        step1_desc: "Licenciatura y Máster en Educación. Rigor metodológico, optimización sistemática y capacidad pedagógica para estructurar problemas complejos.",
+        step2_tag: "DATOS & EQUIPOS",
+        step2_title: "Liderazgo en 4TIUS (40 pax)",
+        step2_desc: "Dirección remota de 40 especialistas para modelar taxonomías de ejercicios y bases de datos estructuradas para motores algorítmicos.",
+        step3_tag: "INGENIERÍA CORE",
+        step3_title: "HACK A BOSS (+800h)",
+        step3_desc: "Bases sólidas de desarrollo tradicional con JavaScript, React, Node.js, Express, bases de datos SQL relacionales y APIs RESTful.",
+        step4_tag: "PRODUCTO & IA",
+        step4_title: "2befit & Proyectos con IA",
+        step4_desc: "Construcción de software para resolver problemas operativos reales utilizando Gemini AI, OpenAI, Firebase en tiempo real y Vercel.",
+
+        domain_badge: "DOMAIN EXPERTISE · VENTAJA COMPETITIVA",
+        domain_title: "FitnessTech, HealthTech & Rendimiento Humano",
+        domain_desc: "Formación académica en Ciencias de la Actividad Física y del Deporte combinada con experiencia profesional en rendimiento y salud. Este conocimiento me permite entender las necesidades reales de usuario, los flujos de adherencia y la taxonomía de datos detrás de cada producto.",
+        domain_quote: "“No desarrollo software para un dominio que desconozco: aporto conocimiento experto en rendimiento humano y salud directamente a la arquitectura del producto.”",
+        domain_tag_wearables: "#Wearables & Métricas",
+        domain_tag_ai: "#IA Aplicada a Salud",
+        domain_card1_title: "Comprensión de Usuario",
+        domain_card1_desc: "Diseño de UX y flujos adaptados a la psicología real de entrenamiento y hábitos.",
+        domain_card2_title: "Criterio de Datos",
+        domain_card2_desc: "Estructuración rigurosa de biomarcadores, nutrición y carga física.",
+
+        projects_tag: "Evidencia Técnica",
+        projects_title: "Proyectos funcionales con código abierto",
+        projects_all_gh: "Ver todos en GitHub",
+        proj_btn_repo: "Repositorio GitHub",
+        proj_btn_profile: "Perfil GitHub",
+
+        proj1_badge: "En Producción · 35+ Usuarios",
+        proj1_subtitle: "PWA Comunitaria & Gestor de Ligas Deportivas",
+        proj1_desc: "PWA en producción utilizada por más de 35 jugadores para organizar partidos, rankings competitivos en tiempo real y votaciones post-partido.",
+        proj1_b1: "Firebase Firestore + Auth en tiempo real",
+        proj1_b2: "Panel de administración con roles RBAC",
+        proj1_b3: "Animaciones con Framer Motion",
+
+        proj2_badge: "TypeScript · Offline-First",
+        proj2_subtitle: "PWA de Seguimiento Biométrico e Hitos Familiares",
+        proj2_desc: "PWA en TypeScript estricto para seguimiento biométrico e hitos infantiles con sincronización en tiempo real y soporte multiusuario de hogares.",
+        proj2_b1: "Firebase Cloud Messaging (FCM) push en segundo plano",
+        proj2_b2: "Arquitectura Offline-First con SyncBadge",
+        proj2_b3: "Tests automatizados con Vitest",
+
+        proj3_badge: "IA Generativa & APIs",
+        proj3_subtitle: "Plataforma HealthTech con IA & Métricas",
+        proj3_desc: "Plataforma PWA para la gestión de hábitos y entrenamiento que integra Google Gemini AI para análisis asistido y lector óptico de códigos de barras.",
+        proj3_b1: "Google Gemini AI SDK integrado",
+        proj3_b2: "4 APIs de datos nutricionales REST",
+        proj3_b3: "Métricas visuales con Recharts",
+
+        proj4_badge: "Agente Autónomo",
+        proj4_subtitle: "Backend & Integración con Tool-Calling",
+        proj4_desc: "Servicio backend en Node.js/Express con OpenAI API y Supabase para cualificar consultas de clientes y agendar citas en tiempo real con Google Calendar.",
+        proj4_b1: "Memoria contextual en PostgreSQL (Supabase)",
+        proj4_b2: "Tool Calling con Google Calendar API",
+        proj4_b3: "Despliegue en VPS Hetzner con Coolify",
+
+        proj5_badge: "Landing Web & UI",
+        proj5_subtitle: "Arquitectura de Landing Moderna",
+        proj5_desc: "Plataforma web de captación y presentación de servicios construida con React 19, Tailwind CSS v4, animaciones con Framer Motion y multi-idioma con i18next.",
+        proj5_b1: "React 19 + Tailwind CSS v4",
+        proj5_b2: "Animaciones fluidas con Framer Motion",
+        proj5_b3: "Internacionalización integrada con i18next",
+
+        proj6_badge: "Multimedia Headless",
+        proj6_subtitle: "Motor de Renderizado de Vídeo en Servidor",
+        proj6_desc: "Motor de renderizado de vídeo headless en Node.js a 1080x1920 30fps para composición automatizada de vídeo con sincronización de audio multicapa.",
+        proj6_b1: "Puppeteer + Canvas + GSAP fotograma a fotograma",
+        proj6_b2: "Sincronización precisa de diseño de sonido",
+        proj6_b3: "Pipelines agénticos automatizados",
+
+        terminal_tag: "Terminal de Desarrollo",
+        terminal_title: "Inspección interactiva de perfil (VS Code Terminal)",
+        terminal_tab_main: "TERMINAL",
+        terminal_tab_output: "SALIDA",
+        terminal_tab_debug: "CONSOLA DEPURACIÓN",
+        terminal_tab_ports: "PUERTOS",
+        terminal_scripts_label: "Scripts:",
+        script_btn_1: "quien-soy.sh",
+        script_btn_2: "stack.sh",
+        script_btn_3: "liderazgo-datos.sh",
+        script_btn_4: "por-que-contratar.sh",
+
+        stack_tag: "Stack Técnico",
+        stack_title: "Tecnologías probadas en producción",
+        stack_cat1: "Frontend & Web",
+        stack_cat2: "Backend & Cloud",
+        stack_cat3: "IA Aplicada",
+        stack_cat4: "Calidad & Datos",
+        stack_pwa: "• PWAs & Caché Offline",
+        stack_agents: "• Agentes con Memoria Persistente",
+        stack_ai_dev: "• Desarrollo asistido con IA",
+        stack_data: "• Curación y Taxonomía de Datos",
+        stack_clean: "• Clean Code & Modularidad",
+        stack_team: "• Gestión de Equipos Remotos",
+
+        exp_tag: "Trayectoria Profesional",
+        exp_title: "Experiencia laboral & Formación",
+        exp1_role: "Founder & Full-Stack Developer",
+        exp1_date: "Mayo 2023 – Presente",
+        exp1_desc: "Diseño y desarrollo de herramientas web propias (PWAs en React y Firebase) para clientes reales, integrando Gemini API y automatizaciones para escalar el servicio.",
+        exp2_role: "Director de Contenidos & Datos",
+        exp2_company: "4TIUS (Startup Tecnológica / Wellness)",
+        exp2_date: "Marzo 2015 – Abril 2017",
+        exp2_desc: "Dirección y coordinación remota de un equipo distribuido de <strong>40 especialistas</strong> para el modelado, etiquetado y diseño de ontologías de ejercicios para motores de recomendación.",
+        exp3_role: "Full-Stack Developer (Formación Técnica)",
+        exp3_date: "Noviembre 2024 – Abril 2025",
+        exp3_desc: "Más de 800 horas de formación técnica intensiva centradas en JavaScript (ES6+), React, Node.js, Express, SQL relacional y arquitectura de software.",
+
+        footer_title: "Contacto",
+        footer_desc: "Disponible para posiciones en remoto como Full-Stack Developer, Frontend Developer o Software Engineer con foco en producto e IA.",
+        footer_btn_email: "Enviar Email",
+        footer_btn_cv: "CV (PDF)",
+        toast_copied: "¡Email copiado: patricioescabe@gmail.com!"
+      },
+
+      en: {
+        nav_trayectoria: "Background",
+        nav_domain: "Domain",
+        nav_proyectos: "Projects",
+        nav_stack: "Stack",
+        nav_terminal: "Terminal",
+        nav_experiencia: "Experience",
+        nav_remote: "Remote",
+        nav_cv_btn: "CV (PDF)",
+
+        hero_badge: "Full-Stack Developer · AI Applications",
+        hero_title: "Full-Stack Developer focused on web apps, AI & product delivery.",
+        hero_description: 'Solid foundation in <strong class="text-zinc-200 font-semibold">JavaScript (ES6+), React, Node.js and Firebase</strong>. Combining +800h of software engineering training with previous experience leading distributed teams of <span class="text-zinc-200 font-semibold">40 specialists</span>, data curation, and shipping production apps with active users.',
+        hero_btn_projects: "View Projects",
+        metric_1: "Active Users (Pachangapp)",
+        metric_2: "Specialists Led (4TIUS)",
+        metric_3: "Web Engineering (HACK A BOSS)",
+        metric_4: "Active Repos & Apps",
+
+        trayectoria_tag: "Background & Differentiation",
+        trayectoria_title: "Engineering, data standards & real leadership experience",
+        step1_tag: "SCIENCE & METHOD",
+        step1_title: "Sports Science Degree (UGR)",
+        step1_desc: "Bachelor's Degree + Master's in Education. Methodological rigor, systematic optimization and pedagogical ability to break down complex domain problems.",
+        step2_tag: "DATA & TEAMS",
+        step2_title: "Leadership at 4TIUS (40 pax)",
+        step2_desc: "Remote management of 40 specialists to model exercise taxonomies and structured datasets for algorithmic recommendation engines.",
+        step3_tag: "CORE ENGINEERING",
+        step3_title: "HACK A BOSS (+800h)",
+        step3_desc: "Solid foundations in software engineering with JavaScript, React, Node.js, Express, relational SQL databases, and RESTful APIs.",
+        step4_tag: "PRODUCT & AI",
+        step4_title: "2befit & AI Projects",
+        step4_desc: "Building software to solve real customer and business needs using Google Gemini AI SDK, OpenAI API, real-time Firebase, and Vercel.",
+
+        domain_badge: "DOMAIN EXPERTISE · UNFAIR ADVANTAGE",
+        domain_title: "FitnessTech, HealthTech & Human Performance",
+        domain_desc: "Academic background in Sports Science combined with professional experience in human performance and health. This enables a deep understanding of real user psychology, retention workflows, and data taxonomies behind health products.",
+        domain_quote: "“I don't just write code for a domain I don't know — I bring deep domain expertise in human performance and health directly into the product architecture.”",
+        domain_tag_wearables: "#Wearables & Biometrics",
+        domain_tag_ai: "#AI applied to Health",
+        domain_card1_title: "User Psychology & UX",
+        domain_card1_desc: "UX and interaction design tailored to adherence, habit formation, and athlete workflows.",
+        domain_card2_title: "Data Standards & Curation",
+        domain_card2_desc: "Rigorous structuring of biomarkers, nutritional parameters, and physical training load metrics.",
+
+        projects_tag: "Technical Evidence",
+        projects_title: "Functional open-source projects & production apps",
+        projects_all_gh: "View all on GitHub",
+        proj_btn_repo: "GitHub Repository",
+        proj_btn_profile: "GitHub Profile",
+
+        proj1_badge: "In Production · 35+ Users",
+        proj1_subtitle: "Sports Community & League Manager PWA",
+        proj1_desc: "Live PWA actively used by 35+ players to organize games, compute real-time dynamic rankings, and manage post-match MVP votes.",
+        proj1_b1: "Reactive real-time persistence with Firestore + Auth",
+        proj1_b2: "RBAC administration panel for match management",
+        proj1_b3: "Fluid UI micro-interactions with Framer Motion",
+
+        proj2_badge: "TypeScript · Offline-First",
+        proj2_subtitle: "Real-Time Family & Health Tracker PWA",
+        proj2_desc: "Strict TypeScript PWA for tracking child milestones and biometric logs with real-time sync across household family members.",
+        proj2_b1: "Background Push notifications with Firebase FCM",
+        proj2_b2: "Offline-First architecture with SyncBadge status",
+        proj2_b3: "Automated test suite with Vitest",
+
+        proj3_badge: "Generative AI & HealthTech",
+        proj3_subtitle: "AI-Powered Health & Metrics Platform",
+        proj3_desc: "PWA for health habits and workout tracking integrating Google Gemini AI SDK for smart meal analysis and 4 nutritional data APIs.",
+        proj3_b1: "Integrated Google Gemini AI SDK",
+        proj3_b2: "4 REST Data APIs (OpenFoodFacts, Edamam, etc.)",
+        proj3_b3: "Interactive charts with Recharts + Vitest tests",
+
+        proj4_badge: "Autonomous Agent",
+        proj4_subtitle: "Backend & Tool-Calling Integration",
+        proj4_desc: "Node.js/Express backend service powered by OpenAI API and Supabase (PostgreSQL) to qualify leads and book appointments via Google Calendar Tool-Calling.",
+        proj4_b1: "Persistent conversation context in PostgreSQL",
+        proj4_b2: "Live Tool Calling with Google Calendar API",
+        proj4_b3: "Cloud deployment on Hetzner VPS with Coolify",
+
+        proj5_badge: "High-Converting Web UI",
+        proj5_subtitle: "Modern Landing Architecture",
+        proj5_desc: "High-performance web landing platform built with React 19, Tailwind CSS v4, smooth scroll animations with Framer Motion, and i18next.",
+        proj5_b1: "React 19 + Tailwind CSS v4 modern styling",
+        proj5_b2: "Fluid scroll interactions with Framer Motion",
+        proj5_b3: "Internationalization (i18n) ready with i18next",
+
+        proj6_badge: "Headless Multimedia",
+        proj6_subtitle: "Server-Side Video Renderer",
+        proj6_desc: "Headless server video renderer in Node.js at 1080x1920 30fps for automated batch video generation with multi-layer audio design.",
+        proj6_b1: "Puppeteer + HTML5 Canvas + GSAP frame-by-frame",
+        proj6_b2: "Accurate multi-layer audio & SFX synchronization",
+        proj6_b3: "Agentic automated content generation pipelines",
+
+        terminal_tag: "Developer Terminal",
+        terminal_title: "Interactive Profile Inspection (VS Code Terminal)",
+        terminal_tab_main: "TERMINAL",
+        terminal_tab_output: "OUTPUT",
+        terminal_tab_debug: "DEBUG CONSOLE",
+        terminal_tab_ports: "PORTS",
+        terminal_scripts_label: "Scripts:",
+        script_btn_1: "about-me.sh",
+        script_btn_2: "stack.sh",
+        script_btn_3: "leadership-data.sh",
+        script_btn_4: "why-hire-me.sh",
+
+        stack_tag: "Tech Stack",
+        stack_title: "Production-tested technologies",
+        stack_cat1: "Frontend & Web",
+        stack_cat2: "Backend & Cloud",
+        stack_cat3: "Applied AI",
+        stack_cat4: "Quality & Data",
+        stack_pwa: "• PWAs & Offline Caching",
+        stack_agents: "• Autonomous Agents with Memory",
+        stack_ai_dev: "• AI-assisted Software Development",
+        stack_data: "• Data Curation & Taxonomies",
+        stack_clean: "• Clean Code & Modularity",
+        stack_team: "• Remote Team Leadership",
+
+        exp_tag: "Professional History",
+        exp_title: "Work Experience & Education",
+        exp1_role: "Founder & Full-Stack Developer",
+        exp1_date: "May 2023 – Present",
+        exp1_desc: "Designed and built custom web platforms (PWAs in React & Firebase) for real clients, integrating Gemini API and automations to scale operations.",
+        exp2_role: "Head of Content & Data",
+        exp2_company: "4TIUS (HealthTech / Wellness Startup)",
+        exp2_date: "March 2015 – April 2017",
+        exp2_desc: "Remotely managed a distributed team of <strong>40 specialists</strong> to model, annotate and structure exercise ontologies for recommendation algorithms.",
+        exp3_role: "Full-Stack Developer (Technical Training)",
+        exp3_date: "November 2024 – April 2025",
+        exp3_desc: "+800 hours of intensive technical training focusing on JavaScript (ES6+), React, Node.js, Express, relational SQL databases, and software architecture.",
+
+        footer_title: "Get in Touch",
+        footer_desc: "Available for full-time remote roles as Full-Stack Developer, Frontend Developer, or Software Engineer with a focus on product and applied AI.",
+        footer_btn_email: "Send Email",
+        footer_btn_cv: "CV (PDF)",
+        toast_copied: "Email copied: patricioescabe@gmail.com!"
+      }
+    };
+
+    function renderManifestCode(lang) {
+      const codeEl = document.getElementById('manifest-code');
+      if (lang === 'es') {
+        codeEl.innerHTML = `<span class="text-[#858585]">// Definición de perfil del candidato</span>
+{
+  <span class="text-[#9cdcfe]">"candidato"</span>: <span class="text-[#ce9178]">"Patricio Escalona"</span>,
+  <span class="text-[#9cdcfe]">"rol"</span>: <span class="text-[#ce9178]">"Full-Stack Developer"</span>,
+  <span class="text-[#9cdcfe]">"stack_principal"</span>: [
+    <span class="text-[#ce9178]">"JavaScript (ES6+)"</span>,
+    <span class="text-[#ce9178]">"React 19"</span>,
+    <span class="text-[#ce9178]">"Node.js"</span>,
+    <span class="text-[#ce9178]">"Firebase / Firestore"</span>
+  ],
+  <span class="text-[#9cdcfe]">"capacidades_ia"</span>: [
+    <span class="text-[#ce9178]">"Google Gemini SDK"</span>,
+    <span class="text-[#ce9178]">"OpenAI API"</span>,
+    <span class="text-[#ce9178]">"Tool Calling & Agentes Autónomos"</span>
+  ],
+  <span class="text-[#9cdcfe]">"ventaja_diferencial"</span>: {
+    <span class="text-[#9cdcfe]">"liderazgo"</span>: <span class="text-[#b5cea8]">40</span>, <span class="text-[#6a9955]">// Especialistas liderados en remoto</span>
+    <span class="text-[#9cdcfe]">"experto_dominio"</span>: <span class="text-[#4ec9b0]">true</span>, <span class="text-[#6a9955]">// CAFD / HealthTech</span>
+    <span class="text-[#9cdcfe]">"vision_producto"</span>: <span class="text-[#ce9178]">"Apps con usuarios reales activos"</span>
+  },
+  <span class="text-[#9cdcfe]">"estado"</span>: <span class="text-[#4ec9b0]">"LISTO_PARA_ENTREVISTAS"</span>
+}`;
+      } else {
+        codeEl.innerHTML = `<span class="text-[#858585]">// Candidate profile manifest</span>
+{
+  <span class="text-[#9cdcfe]">"name"</span>: <span class="text-[#ce9178]">"Patricio Escalona"</span>,
+  <span class="text-[#9cdcfe]">"role"</span>: <span class="text-[#ce9178]">"Full-Stack Developer"</span>,
+  <span class="text-[#9cdcfe]">"primary_stack"</span>: [
+    <span class="text-[#ce9178]">"JavaScript (ES6+)"</span>,
+    <span class="text-[#ce9178]">"React 19"</span>,
+    <span class="text-[#ce9178]">"Node.js"</span>,
+    <span class="text-[#ce9178]">"Firebase / Firestore"</span>
+  ],
+  <span class="text-[#9cdcfe]">"ai_capabilities"</span>: [
+    <span class="text-[#ce9178]">"Google Gemini SDK"</span>,
+    <span class="text-[#ce9178]">"OpenAI API"</span>,
+    <span class="text-[#ce9178]">"Tool Calling & Autonomous Agents"</span>
+  ],
+  <span class="text-[#9cdcfe]">"unfair_advantage"</span>: {
+    <span class="text-[#9cdcfe]">"leadership"</span>: <span class="text-[#b5cea8]">40</span>, <span class="text-[#6a9955]">// Remote specialists led</span>
+    <span class="text-[#9cdcfe]">"domain_expert"</span>: <span class="text-[#4ec9b0]">true</span>, <span class="text-[#6a9955]">// Sports Science / HealthTech</span>
+    <span class="text-[#9cdcfe]">"product_mindset"</span>: <span class="text-[#ce9178]">"Shipped apps with active users"</span>
+  },
+  <span class="text-[#9cdcfe]">"status"</span>: <span class="text-[#4ec9b0]">"READY_FOR_INTERVIEWS"</span>
+}`;
+      }
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const dict = translations[lang];
+
+      // Update plain text attributes
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerText = dict[key];
+        }
+      });
+
+      // Update HTML content attributes
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      // Update button active styles
+      const btnEs = document.getElementById('lang-btn-es');
+      const btnEn = document.getElementById('lang-btn-en');
+      if (lang === 'es') {
+        btnEs.className = "px-2 py-1 rounded-md font-semibold transition bg-zinc-800 text-white shadow-sm";
+        btnEn.className = "px-2 py-1 rounded-md font-medium transition text-zinc-400 hover:text-zinc-200";
+      } else {
+        btnEn.className = "px-2 py-1 rounded-md font-semibold transition bg-zinc-800 text-white shadow-sm";
+        btnEs.className = "px-2 py-1 rounded-md font-medium transition text-zinc-400 hover:text-zinc-200";
+      }
+
+      renderManifestCode(lang);
+      runCli(currentCliCmd);
+      localStorage.setItem('portfolio_lang', lang);
+      lucide.createIcons();
+    }
 
     function copyEmail() {
       navigator.clipboard.writeText('patricioescabe@gmail.com').then(() => {
-        showToast('¡Email copiado: patricioescabe@gmail.com!');
+        showToast(translations[currentLang].toast_copied);
       });
     }
 
@@ -781,79 +1127,191 @@
     }
 
     function runCli(cmd) {
+      currentCliCmd = cmd;
       const output = document.getElementById('cli-output');
       let html = '';
 
-      if (cmd === 'quien-soy') {
-        html = `
-          <div class="flex items-center gap-2 text-xs flex-wrap">
-            <span class="text-[#4ec9b0]">➜</span>
-            <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
-            <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
-            <span class="text-white font-bold">./quien-soy.sh</span>
-          </div>
-          <div class="space-y-1.5 pt-1 text-xs">
-            <div class="text-[#4ec9b0] font-bold">[CANDIDATE_PROFILE]</div>
-            <div><span class="text-[#9cdcfe]">Nombre:</span> <span class="text-[#ce9178]">Patricio Escalona Becerra</span></div>
-            <div><span class="text-[#9cdcfe]">Posicionamiento:</span> <span class="text-zinc-200 font-semibold">Full-Stack Developer & AI Application Builder</span></div>
-            <div><span class="text-[#9cdcfe]">Ubicación:</span> <span class="text-[#b5cea8]">Marbella, España (100% Remoto para España / UE)</span></div>
-            <div><span class="text-[#9cdcfe]">Inglés:</span> <span class="text-[#dcdcaa]">B2 Profesional Oficial</span></div>
-            <div class="text-[#6a9955] text-[11px] pt-1">// Formación: Bootcamp HACK A BOSS (+800h) | Licenciatura CAFD (UGR) | Máster Educación (UNIR)</div>
-          </div>
-        `;
+      if (cmd === 'status') {
+        if (currentLang === 'es') {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-[#6a9955]">✔</span>
+              <span class="text-white font-bold">patricio --status</span>
+            </div>
+            <div class="text-[#4ec9b0] font-semibold flex items-center gap-1.5">
+              <span>✔</span> <span>[SISTEMA_LISTO]</span> <span class="text-zinc-200">Perfil verificado y disponible para entrevistas técnicas y contratación remota.</span>
+            </div>
+            <div class="text-[#858585] text-[11px] pl-4 border-l border-zinc-800">
+              <span class="text-[#6a9955]">// Haz clic en los scripts superiores para ejecutar diagnósticos sobre el candidato.</span>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-[#6a9955]">✔</span>
+              <span class="text-white font-bold">patricio --status</span>
+            </div>
+            <div class="text-[#4ec9b0] font-semibold flex items-center gap-1.5">
+              <span>✔</span> <span>[SYSTEM_READY]</span> <span class="text-zinc-200">Candidate verified and open for technical interviews and remote roles.</span>
+            </div>
+            <div class="text-[#858585] text-[11px] pl-4 border-l border-zinc-800">
+              <span class="text-[#6a9955]">// Click the scripts above to run diagnostics on candidate background and technical skills.</span>
+            </div>
+          `;
+        }
+      } else if (cmd === 'quien-soy') {
+        if (currentLang === 'es') {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./quien-soy.sh</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#4ec9b0] font-bold">[PERFIL_CANDIDATO]</div>
+              <div><span class="text-[#9cdcfe]">Nombre:</span> <span class="text-[#ce9178]">Patricio Escalona Becerra</span></div>
+              <div><span class="text-[#9cdcfe]">Posicionamiento:</span> <span class="text-zinc-200 font-semibold">Full-Stack Developer & AI Application Builder</span></div>
+              <div><span class="text-[#9cdcfe]">Ubicación:</span> <span class="text-[#b5cea8]">Marbella, España (100% Remoto para España / UE)</span></div>
+              <div><span class="text-[#9cdcfe]">Inglés:</span> <span class="text-[#dcdcaa]">B2 Profesional Oficial</span></div>
+              <div class="text-[#6a9955] text-[11px] pt-1">// Formación: Bootcamp HACK A BOSS (+800h) | Licenciatura CAFD (UGR) | Máster Educación (UNIR)</div>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./about-me.sh</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#4ec9b0] font-bold">[CANDIDATE_PROFILE]</div>
+              <div><span class="text-[#9cdcfe]">Name:</span> <span class="text-[#ce9178]">Patricio Escalona Becerra</span></div>
+              <div><span class="text-[#9cdcfe]">Role:</span> <span class="text-zinc-200 font-semibold">Full-Stack Developer & AI Application Builder</span></div>
+              <div><span class="text-[#9cdcfe]">Location:</span> <span class="text-[#b5cea8]">Marbella, Spain (100% Remote for Spain / EU)</span></div>
+              <div><span class="text-[#9cdcfe]">English:</span> <span class="text-[#dcdcaa]">B2 Professional Working Proficiency</span></div>
+              <div class="text-[#6a9955] text-[11px] pt-1">// Background: HACK A BOSS Bootcamp (+800h) | Sports Science Degree (UGR) | Master in Education (UNIR)</div>
+            </div>
+          `;
+        }
       } else if (cmd === 'stack') {
-        html = `
-          <div class="flex items-center gap-2 text-xs flex-wrap">
-            <span class="text-[#4ec9b0]">➜</span>
-            <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
-            <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
-            <span class="text-white font-bold">./stack.sh --detailed</span>
-          </div>
-          <div class="space-y-1.5 pt-1 text-xs">
-            <div class="text-[#dcdcaa] font-bold">[PRODUCTION_STACK]</div>
-            <div><span class="text-[#4ec9b0] font-semibold font-mono">[FRONTEND]</span> <span class="text-zinc-300">JavaScript (ES6+), React 19, TypeScript, PWAs, Tailwind CSS, Framer Motion, Recharts</span></div>
-            <div><span class="text-[#9cdcfe] font-semibold font-mono">[BACKEND]</span>  <span class="text-zinc-300">Node.js, Express, Firebase Firestore & FCM, PostgreSQL, Supabase, APIs RESTful</span></div>
-            <div><span class="text-[#c586c0] font-semibold font-mono">[AI & LLM]</span> <span class="text-zinc-300">Google Gemini SDK, OpenAI API, Tool Calling, Agentes con Memoria, n8n</span></div>
-            <div><span class="text-[#b5cea8] font-semibold font-mono">[DEVOPS]</span>   <span class="text-zinc-300">Git/GitHub, Vitest, Vercel CI/CD, Hetzner VPS, Coolify</span></div>
-          </div>
-        `;
+        if (currentLang === 'es') {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./stack.sh --detailed</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#dcdcaa] font-bold">[STACK_PRODUCCIÓN]</div>
+              <div><span class="text-[#4ec9b0] font-semibold font-mono">[FRONTEND]</span> <span class="text-zinc-300">JavaScript (ES6+), React 19, TypeScript, PWAs, Tailwind CSS, Framer Motion, Recharts</span></div>
+              <div><span class="text-[#9cdcfe] font-semibold font-mono">[BACKEND]</span>  <span class="text-zinc-300">Node.js, Express, Firebase Firestore & FCM, PostgreSQL, Supabase, APIs RESTful</span></div>
+              <div><span class="text-[#c586c0] font-semibold font-mono">[IA & LLM]</span> <span class="text-zinc-300">Google Gemini SDK, OpenAI API, Tool Calling, Agentes con Memoria, n8n</span></div>
+              <div><span class="text-[#b5cea8] font-semibold font-mono">[DEVOPS]</span>   <span class="text-zinc-300">Git/GitHub, Vitest, Vercel CI/CD, Hetzner VPS, Coolify</span></div>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./stack.sh --detailed</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#dcdcaa] font-bold">[PRODUCTION_STACK]</div>
+              <div><span class="text-[#4ec9b0] font-semibold font-mono">[FRONTEND]</span> <span class="text-zinc-300">JavaScript (ES6+), React 19, TypeScript, PWAs, Tailwind CSS, Framer Motion, Recharts</span></div>
+              <div><span class="text-[#9cdcfe] font-semibold font-mono">[BACKEND]</span>  <span class="text-zinc-300">Node.js, Express, Firebase Firestore & FCM, PostgreSQL, Supabase, RESTful APIs</span></div>
+              <div><span class="text-[#c586c0] font-semibold font-mono">[AI & LLM]</span> <span class="text-zinc-300">Google Gemini SDK, OpenAI API, Tool Calling, Autonomous Agents with Memory, n8n</span></div>
+              <div><span class="text-[#b5cea8] font-semibold font-mono">[DEVOPS]</span>   <span class="text-zinc-300">Git/GitHub, Vitest, Vercel CI/CD, Hetzner VPS, Coolify</span></div>
+            </div>
+          `;
+        }
       } else if (cmd === 'liderazgo') {
-        html = `
-          <div class="flex items-center gap-2 text-xs flex-wrap">
-            <span class="text-[#4ec9b0]">➜</span>
-            <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
-            <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
-            <span class="text-white font-bold">./liderazgo-datos.sh</span>
-          </div>
-          <div class="space-y-1.5 pt-1 text-xs">
-            <div class="text-[#4ec9b0] font-bold">[4TIUS_DATA_LEADERSHIP]</div>
-            <div class="text-zinc-300">• Coordinación y gestión remota de <span class="text-[#b5cea8] font-bold">40 especialistas</span> distribuidos.</div>
-            <div class="text-zinc-300">• Modelado y diseño de taxonomías/ontologías de ejercicios para motores de recomendación algorítmica.</div>
-            <div class="text-zinc-300">• Establecimiento de protocolos de control de calidad (QA) y consistencia en datasets.</div>
-            <div class="text-[#6a9955] text-[11px] pt-1">// Demuestra madurez de gestión, rigor metodológico y comprensión de estructuras de datos a gran escala.</div>
-          </div>
-        `;
+        if (currentLang === 'es') {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./liderazgo-datos.sh</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#4ec9b0] font-bold">[LIDERAZGO_DATOS_4TIUS]</div>
+              <div class="text-zinc-300">• Coordinación y gestión remota de <span class="text-[#b5cea8] font-bold">40 especialistas</span> distribuidos.</div>
+              <div class="text-zinc-300">• Modelado y diseño de taxonomías/ontologías de ejercicios para motores de recomendación algorítmica.</div>
+              <div class="text-zinc-300">• Establecimiento de protocolos de control de calidad (QA) y consistencia en datasets.</div>
+              <div class="text-[#6a9955] text-[11px] pt-1">// Demuestra madurez de gestión, rigor metodológico y comprensión de estructuras de datos a gran escala.</div>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./leadership-data.sh</span>
+            </div>
+            <div class="space-y-1.5 pt-1 text-xs">
+              <div class="text-[#4ec9b0] font-bold">[4TIUS_DATA_LEADERSHIP]</div>
+              <div class="text-zinc-300">• Remote coordination and leadership of <span class="text-[#b5cea8] font-bold">40 distributed specialists</span>.</div>
+              <div class="text-zinc-300">• Design and modeling of exercise taxonomies and ontologies for algorithmic recommendation engines.</div>
+              <div class="text-zinc-300">• Implementation of structured data quality assurance (QA) protocols.</div>
+              <div class="text-[#6a9955] text-[11px] pt-1">// Demonstrates leadership maturity, systematic rigor, and large-scale data modeling skills.</div>
+            </div>
+          `;
+        }
       } else if (cmd === 'por-que-contratar') {
-        html = `
-          <div class="flex items-center gap-2 text-xs flex-wrap">
-            <span class="text-[#4ec9b0]">➜</span>
-            <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
-            <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
-            <span class="text-white font-bold">./por-que-contratar.sh</span>
-          </div>
-          <div class="space-y-2 pt-1 text-xs">
-            <div class="text-[#c586c0] font-bold">[POR_QUÉ_CONTRATAR_ESTE_PERFIL]</div>
-            <div><span class="text-[#4ec9b0]">1. Capacidad de Construir Producto Real:</span> <span class="text-zinc-300">No solo tutoriales; aplicaciones completas con usuarios activos (Pachangapp 35+, Nido App, 2befit Hub).</span></div>
-            <div><span class="text-[#9cdcfe]">2. IA Aplicada Práctica:</span> <span class="text-zinc-300">Integración de SDKs de Gemini/OpenAI con Tool Calling real, bases vectoriales y memoria relacional.</span></div>
-            <div><span class="text-[#dcdcaa]">3. Domain Expertise en Salud/Fitness:</span> <span class="text-zinc-300">Comprensión profunda de métricas, adherencia de usuario y negocio en FitnessTech & HealthTech.</span></div>
-            <div><span class="text-[#b5cea8]">4. Madurez y Liderazgo Previo:</span> <span class="text-zinc-300">Experiencia previa coordinando 40 personas, comunicación clara y foco en resolver problemas de negocio.</span></div>
-          </div>
-        `;
+        if (currentLang === 'es') {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./por-que-contratar.sh</span>
+            </div>
+            <div class="space-y-2 pt-1 text-xs">
+              <div class="text-[#c586c0] font-bold">[POR_QUÉ_CONTRATAR_ESTE_PERFIL]</div>
+              <div><span class="text-[#4ec9b0]">1. Capacidad de Construir Producto Real:</span> <span class="text-zinc-300">No solo tutoriales; aplicaciones completas con usuarios activos (Pachangapp 35+, Nido App, 2befit Hub).</span></div>
+              <div><span class="text-[#9cdcfe]">2. IA Aplicada Práctica:</span> <span class="text-zinc-300">Integración de SDKs de Gemini/OpenAI con Tool Calling real, bases vectoriales y memoria relacional.</span></div>
+              <div><span class="text-[#dcdcaa]">3. Domain Expertise en Salud/Fitness:</span> <span class="text-zinc-300">Comprensión profunda de métricas, adherencia de usuario y negocio en FitnessTech & HealthTech.</span></div>
+              <div><span class="text-[#b5cea8]">4. Madurez y Liderazgo Previo:</span> <span class="text-zinc-300">Experiencia previa coordinando 40 personas, comunicación clara y foco en resolver problemas de negocio.</span></div>
+            </div>
+          `;
+        } else {
+          html = `
+            <div class="flex items-center gap-2 text-xs flex-wrap">
+              <span class="text-[#4ec9b0]">➜</span>
+              <span class="text-[#9cdcfe] font-semibold">~/portfolio</span>
+              <span class="text-[#c586c0]">git:(<span class="text-[#ce9178]">main</span>)</span>
+              <span class="text-white font-bold">./why-hire-me.sh</span>
+            </div>
+            <div class="space-y-2 pt-1 text-xs">
+              <div class="text-[#c586c0] font-bold">[WHY_HIRE_THIS_DEVELOPER]</div>
+              <div><span class="text-[#4ec9b0]">1. Proven Product Delivery:</span> <span class="text-zinc-300">Not just demo clones; shipped end-to-end apps with live users (Pachangapp 35+, Nido App, 2befit Hub).</span></div>
+              <div><span class="text-[#9cdcfe]">2. Practical Applied AI:</span> <span class="text-zinc-300">Hands-on integration with Gemini/OpenAI SDKs, real-time Tool Calling, and relational memory.</span></div>
+              <div><span class="text-[#dcdcaa]">3. Domain Expertise in Health & Fitness:</span> <span class="text-zinc-300">Unfair advantage in user psychology, adherence loops, and data modeling for FitnessTech & HealthTech.</span></div>
+              <div><span class="text-[#b5cea8]">4. Leadership & Maturity:</span> <span class="text-zinc-300">Prior experience leading 40 specialists, strong communication, and high agency solving business problems.</span></div>
+            </div>
+          `;
+        }
       }
 
       output.innerHTML = html;
       lucide.createIcons();
     }
+
+    // Initialize with saved or default language (Spanish)
+    const savedLang = localStorage.getItem('portfolio_lang') || 'es';
+    setLanguage(savedLang);
   </script>
 </body>
 </html>
