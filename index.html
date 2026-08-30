@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricio Escalona | Full-Stack Developer & AI Applications</title>
+  <meta name="description" content="Portfolio y CV interactivo de Patricio Escalona Becerra. Full-Stack Developer con foco en JavaScript, React, Node.js, Firebase y aplicaciones con IA.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #080c14; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .bg-mesh {
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover { border-color: rgba(59, 130, 246, 0.35); }
+    .text-gradient-blue {
+      background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-mesh min-h-screen selection:bg-blue-500/30 selection:text-blue-100">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-white/5 bg-slate-950/80 px-4 sm:px-8 py-3.5 transition-all">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20 group-hover:scale-105 transition">
+          P
+        </div>
+        <div>
+          <span class="font-bold text-slate-100 text-sm tracking-tight block">Patricio Escalona</span>
+          <span class="text-[11px] text-slate-400 font-mono block">@P-tricio</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
+        <a href="#trayectoria" class="hover:text-blue-400 transition">Trayectoria</a>
+        <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
+        <a href="#stack" class="hover:text-blue-400 transition">Stack</a>
+        <a href="#terminal" class="hover:text-blue-400 transition">Terminal</a>
+        <a href="#experiencia" class="hover:text-blue-400 transition">Experiencia</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Open to Remote
+        </div>
+        <a href="CV_Patricio_Escalona_Becerra.pdf" download class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-md shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Descargar CV</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="max-w-6xl mx-auto px-4 sm:px-8 pt-16 pb-12 sm:pt-24 sm:pb-20">
+    <div class="flex flex-col lg:flex-row gap-12 items-center justify-between">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          Full-Stack Developer & AI Application Builder
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          Construyo aplicaciones web <span class="text-gradient-blue">reales con IA</span> y visión de producto.
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+          Desarrollador Full-Stack con base sólida en <span class="text-white font-semibold">JavaScript (ES6+), React, Node.js y Firebase</span>. Combino más de 800h de ingeniería técnica con experiencia previa liderando equipos de <span class="text-cyan-400 font-semibold">40 personas</span>, taxonomías de datos y productos en producción con usuarios activos.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <a href="#proyectos" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>Ver Proyectos Reales</span>
+          </a>
+          <a href="https://github.com/P-tricio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm transition">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Profile</span>
+          </a>
+          <button onclick="copyEmail()" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 text-sm font-medium transition" title="Copiar email">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span id="email-btn-text">patricioescabe@gmail.com</span>
+          </button>
+        </div>
+
+        <!-- QUICK METRICS -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80">
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">35+</div>
+            <div class="text-xs text-slate-400 mt-0.5">Usuarios en Producción (Pachangapp)</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">40</div>
+            <div class="text-xs text-slate-400 mt-0.5">Especialistas Liderados (4TIUS Data)</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">+800h</div>
+            <div class="text-xs text-slate-400 mt-0.5">Ingeniería Web (HACK A BOSS)</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">5+</div>
+            <div class="text-xs text-slate-400 mt-0.5">Apps & Sistemas Desplegados</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CODE CARD -->
+      <div class="w-full lg:w-[420px] shrink-0">
+        <div class="glass-card rounded-2xl p-5 shadow-2xl border border-slate-800/80 relative overflow-hidden group">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">developer-dna.json</span>
+          </div>
+
+          <pre class="font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto"><code>{
+  <span class="text-cyan-400">"candidate"</span>: <span class="text-emerald-300">"Patricio Escalona"</span>,
+  <span class="text-cyan-400">"role"</span>: <span class="text-emerald-300">"Full-Stack Developer"</span>,
+  <span class="text-cyan-400">"focus"</span>: [<span class="text-blue-300">"JavaScript"</span>, <span class="text-blue-300">"React"</span>, <span class="text-blue-300">"Node"</span>, <span class="text-blue-300">"Firebase"</span>],
+  <span class="text-cyan-400">"ai_integration"</span>: [<span class="text-emerald-300">"Gemini"</span>, <span class="text-emerald-300">"OpenAI"</span>, <span class="text-emerald-300">"Tool-Calling"</span>],
+  <span class="text-cyan-400">"unfair_advantage"</span>: {
+    <span class="text-cyan-400">"leadership"</span>: <span class="text-emerald-300">"40 people remote team"</span>,
+    <span class="text-cyan-400">"data_taxonomy"</span>: <span class="text-emerald-300">"Algorithm dataset curation"</span>,
+    <span class="text-cyan-400">"founder_mindset"</span>: <span class="text-emerald-300">"Real business problem solver"</span>
+  },
+  <span class="text-cyan-400">"status"</span>: <span class="text-emerald-400">"READY_FOR_INTERVIEWS"</span>
+}</code></pre>
+
+          <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i> Marbella, ES (Remoto)
+            </span>
+            <span class="text-emerald-400 font-mono flex items-center gap-1">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Verificado
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRAYECTORIA / LA HISTORIA DIFERENCIAL -->
+  <section id="trayectoria" class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest font-mono mb-2">Por qué este perfil es diferente</h2>
+      <p class="text-2xl sm:text-3xl font-extrabold text-white">No soy un graduado estándar: combino ciencia, datos, gestión y código.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="glass-card rounded-2xl p-6 transition hover:-translate-y-1">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+          <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-2">1. Ciencias del Deporte & Metodología</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Licenciatura (UGR) y Máster en Educación. Aportan rigor analítico, optimización de sistemas biológicos y didáctica para desglosar problemas complejos.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 transition hover:-translate-y-1">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
+          <i data-lucide="users" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-2">2. Liderazgo de 40 Personas & Datos</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          En <strong>4TIUS</strong> dirigí en remoto a 40 especialistas para modelar y etiquetar taxonomías de ejercicios para motores de recomendación algorítmica.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 transition hover:-translate-y-1">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+          <i data-lucide="code-2" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-2">3. Fundamentos de Ingeniería Web</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Bootcamp de +800h en <strong>HACK A BOSS</strong>: desarrollo tradicional con JavaScript, React, Node.js, Express, modelado relacional SQL y APIs RESTful.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 transition hover:-translate-y-1">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-4">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-2">4. Producto Real & Aplicaciones IA</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          En <strong>2befit</strong> y proyectos propios desarrollo software para resolver necesidades reales con Gemini AI, OpenAI, Firebase en tiempo real y Vercel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS TÉCNICOS DESTACADOS -->
+  <section id="proyectos" class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest font-mono mb-2">Proyectos & Evidencia Técnica</h2>
+        <p class="text-2xl sm:text-3xl font-extrabold text-white">Aplicaciones funcionales, código abierto y métricas reales</p>
+      </div>
+      <a href="https://github.com/P-tricio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition font-mono">
+        <span>Ver todos en GitHub</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- PROYECTO 1: PACHANGAPP -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800 relative group hover:border-blue-500/40 transition">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold border border-emerald-500/20">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              En Producción · 35+ Usuarios
+            </span>
+            <a href="https://github.com/P-tricio/Pachangapp" target="_blank" class="text-slate-400 hover:text-white transition">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2">Pachangapp</h3>
+          <p class="text-xs text-blue-400 font-mono mb-3">Sports Community & League Manager PWA</p>
+          
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Progressive Web App utilizada activamente por una comunidad de más de 35 jugadores para organizar partidos, calcular rankings competitivos dinámicos y gestionar votaciones post-partido en tiempo real.
+          </p>
+
+          <div class="space-y-1.5 mb-6 text-xs text-slate-400">
+            <div class="flex items-start gap-2">
+              <span class="text-blue-400">•</span>
+              <span><strong>Persistencia reactiva:</strong> Firebase Firestore + Auth con sincronización en vivo.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-400">•</span>
+              <span><strong>Panel RBAC:</strong> Gestión de roles SuperAdmin y usuarios.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-blue-400">•</span>
+              <span><strong>UI Fluida:</strong> Animaciones con Framer Motion y Tailwind CSS.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 mb-4">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">JavaScript (ES6+)</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">React 19</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Firebase</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">PWA</span>
+          </div>
+          <a href="https://github.com/P-tricio/Pachangapp" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-2 transition">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Ver Repositorio en GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2: 2BEFIT HUB -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800 relative group hover:border-cyan-500/40 transition">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-[11px] font-semibold border border-cyan-500/20">
+              <i data-lucide="bot" class="w-3 h-3"></i>
+              IA Generativa & HealthTech
+            </span>
+            <a href="https://github.com/P-tricio/2befitHub" target="_blank" class="text-slate-400 hover:text-white transition">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2">2befit Hub</h3>
+          <p class="text-xs text-cyan-400 font-mono mb-3">AI-Powered Health & Metrics Platform</p>
+          
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Plataforma PWA para la gestión de hábitos y entrenamiento que integra el SDK de Google Gemini AI para asistencia inteligente, lector óptico de códigos de barras y consumo de 4 APIs de datos nutricionales.
+          </p>
+
+          <div class="space-y-1.5 mb-6 text-xs text-slate-400">
+            <div class="flex items-start gap-2">
+              <span class="text-cyan-400">•</span>
+              <span><strong>Google Gemini AI SDK:</strong> Análisis asistido y personalización.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-cyan-400">•</span>
+              <span><strong>4 APIs REST:</strong> OpenFoodFacts, Edamam, Spoonacular, FatSecret.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-cyan-400">•</span>
+              <span><strong>Métricas visuales:</strong> Gráficos con Recharts + Tests con Vitest.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 mb-4">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">JavaScript (ES6+)</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Gemini AI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Firebase</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Vitest</span>
+          </div>
+          <a href="https://github.com/P-tricio/2befitHub" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-2 transition">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Ver Repositorio en GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3: WHATSAPP AI AGENT -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-slate-800 relative group hover:border-purple-500/40 transition">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 text-[11px] font-semibold border border-purple-500/20">
+              <i data-lucide="cpu" class="w-3 h-3"></i>
+              Agente Autónomo con Memoria
+            </span>
+            <a href="https://github.com/P-tricio/whatsapp-agent" target="_blank" class="text-slate-400 hover:text-white transition">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2">WhatsApp AI Agent</h3>
+          <p class="text-xs text-purple-400 font-mono mb-3">Backend & Tool-Calling Integration</p>
+          
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Servicio backend en Node.js/Express conectado a la API de OpenAI y Supabase (PostgreSQL) para cualificar consultas de clientes y agendar citas en tiempo real mediante Tool Calling con Google Calendar API.
+          </p>
+
+          <div class="space-y-1.5 mb-6 text-xs text-slate-400">
+            <div class="flex items-start gap-2">
+              <span class="text-purple-400">•</span>
+              <span><strong>Memoria Persistente:</strong> Contexto en PostgreSQL (Supabase).</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-purple-400">•</span>
+              <span><strong>Tool Calling en vivo:</strong> Conexión con Google Calendar & Sheets.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-purple-400">•</span>
+              <span><strong>Infraestructura Cloud:</strong> VPS Hetzner con Coolify y webhooks.</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-800/80 mb-4">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Node.js</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">OpenAI API</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Supabase</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px] font-mono">Google APIs</span>
+          </div>
+          <a href="https://github.com/P-tricio/whatsapp-agent" target="_blank" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-2 transition">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span>Ver Repositorio en GitHub</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PROYECTOS SECUNDARIOS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+      <div class="glass-card rounded-xl p-5 border-slate-800 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h4 class="font-bold text-white text-sm">Nido App (PWA & FCM)</h4>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">TypeScript · Vercel</span>
+          </div>
+          <p class="text-slate-400 text-xs mt-1">
+            PWA con TypeScript estricto, React 19, Firestore en tiempo real y notificaciones push en segundo plano con Firebase Cloud Messaging (FCM).
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-xl p-5 border-slate-800 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+          <i data-lucide="video" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h4 class="font-bold text-white text-sm">HyperFrames Engine</h4>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300">Puppeteer · GSAP · Canvas</span>
+          </div>
+          <p class="text-slate-400 text-xs mt-1">
+            Motor de renderizado headless en servidor a 1080x1920 30fps para generación masiva de composiciones de vídeo con diseño de sonido multicapa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TERMINAL SECTION -->
+  <section id="terminal" class="max-w-4xl mx-auto px-4 sm:px-8 py-16">
+    <div class="text-center mb-8">
+      <h2 class="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono mb-2">Consola Interactiva</h2>
+      <p class="text-2xl font-extrabold text-white">Inspecciona el perfil en modo CLI</p>
+    </div>
+
+    <div class="rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs">
+      <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+          <span class="text-slate-400 text-[11px] ml-2">p-tricio@terminal: ~</span>
+        </div>
+        <span class="text-[10px] text-slate-400">bash 5.2</span>
+      </div>
+
+      <div class="bg-slate-900/50 px-4 py-2 border-b border-slate-800 flex flex-wrap gap-2 text-[11px]">
+        <span class="text-slate-400">Ejecutar comando:</span>
+        <button onclick="runCli('quien-soy')" class="px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 transition">./quien-soy.sh</button>
+        <button onclick="runCli('stack')" class="px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-emerald-300 transition">./stack.sh</button>
+        <button onclick="runCli('liderazgo')" class="px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300 transition">./liderazgo-datos.sh</button>
+        <button onclick="runCli('por-que-contratar')" class="px-2.5 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-purple-300 transition">./por-que-contratar.sh</button>
+      </div>
+
+      <div id="cli-output" class="p-5 text-slate-300 space-y-3 min-h-[220px]">
+        <div class="text-slate-400">
+          $ <span class="text-white">p-tricio --status</span>
+        </div>
+        <div class="text-emerald-400">
+          ✔ Sistema operativo y listo para entrevistas técnicas.
+        </div>
+        <div class="text-slate-300 leading-relaxed">
+          Haz clic en cualquiera de los scripts superiores para inspeccionar detalles sobre trayectoria, experiencia en liderazgo de equipos, stack técnico y visión de producto.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK GRID -->
+  <section id="stack" class="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest font-mono mb-2">Habilidades Técnicas</h2>
+      <p class="text-2xl sm:text-3xl font-extrabold text-white">Stack moderno, sin relleno</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex items-center gap-2.5 mb-4 text-blue-400">
+          <i data-lucide="layout" class="w-5 h-5"></i>
+          <h3 class="font-bold text-white text-sm uppercase tracking-wider font-mono">Frontend & Web</h3>
+        </div>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span><strong>JavaScript (ES6+)</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span><strong>React 19</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span><strong>TypeScript</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>PWAs & Offline Caching</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>Tailwind CSS & Framer Motion</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>Recharts (Visualización de datos)</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex items-center gap-2.5 mb-4 text-cyan-400">
+          <i data-lucide="server" class="w-5 h-5"></i>
+          <h3 class="font-bold text-white text-sm uppercase tracking-wider font-mono">Backend & Cloud</h3>
+        </div>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><strong>Node.js & Express</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><strong>Firebase</strong> (Firestore, FCM, Auth)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><strong>PostgreSQL & Supabase</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>APIs RESTful & Webhooks</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>Vercel & Despliegues CI/CD</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>VPS Hetzner & Coolify</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex items-center gap-2.5 mb-4 text-purple-400">
+          <i data-lucide="bot" class="w-5 h-5"></i>
+          <h3 class="font-bold text-white text-sm uppercase tracking-wider font-mono">IA Aplicada</h3>
+        </div>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><strong>Google Gemini AI SDK</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><strong>OpenAI API</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span><strong>Tool Calling</strong> (Google Calendar)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Agentes con Memoria Persistente</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>n8n & Automatización</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>Desarrollo asistido con IA</li>
+        </ul>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex items-center gap-2.5 mb-4 text-emerald-400">
+          <i data-lucide="check-circle" class="w-5 h-5"></i>
+          <h3 class="font-bold text-white text-sm uppercase tracking-wider font-mono">Calidad & Datos</h3>
+        </div>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><strong>Vitest</strong> (Unit & Integration)</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>React Testing Library</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><strong>Git & GitHub</strong></li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Taxonomía y Curación de Datos</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Clean Code & Arquitectura Modular</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Liderazgo de Equipos Distribuidos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA LABORAL & EDUCACIÓN -->
+  <section id="experiencia" class="max-w-4xl mx-auto px-4 sm:px-8 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-xs font-bold text-blue-400 uppercase tracking-widest font-mono mb-2">Trayectoria Profesional</h2>
+      <p class="text-2xl sm:text-3xl font-extrabold text-white">Experiencia laboral & Formación</p>
+    </div>
+
+    <div class="space-y-6">
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+          <div>
+            <h3 class="text-base font-bold text-white">Founder & Full-Stack Developer</h3>
+            <span class="text-xs text-blue-400 font-semibold">2befit</span>
+          </div>
+          <span class="text-xs text-slate-400 font-mono">Mayo 2023 – Presente</span>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Diseño y desarrollo de aplicaciones web propias (PWAs en React y Firebase) para clientes reales, integrando Gemini API y flujos de automatización para escalar el servicio.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+          <div>
+            <h3 class="text-base font-bold text-white">Director de Contenidos & Datos</h3>
+            <span class="text-xs text-cyan-400 font-semibold">4TIUS (Startup Tecnológica / Wellness)</span>
+          </div>
+          <span class="text-xs text-slate-400 font-mono">Marzo 2015 – Abril 2017</span>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Dirección y coordinación remota de un equipo distribuido de <strong>40 especialistas</strong> para el modelado, etiquetado y diseño de la ontología de ejercicios para alimentar el motor de recomendación inteligente.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+          <div>
+            <h3 class="text-base font-bold text-white">Full-Stack Developer (Formación Técnica & Proyectos)</h3>
+            <span class="text-xs text-emerald-400 font-semibold">HACK A BOSS</span>
+          </div>
+          <span class="text-xs text-slate-400 font-mono">Noviembre 2024 – Abril 2025</span>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Más de 800 horas de formación técnica intensiva centradas en JavaScript (ES6+), React, Node.js, Express, SQL relacional y desarrollo de aplicaciones web con buenas prácticas de ingeniería.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/60 py-16 px-4 sm:px-8 mt-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">¿Hablamos de cómo puedo aportar valor a tu equipo?</h2>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto mb-8">
+        Disponible para posiciones en remoto como Full-Stack Developer, Frontend Developer o Software Engineer con foco en IA y producto.
+      </p>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
+        <a href="mailto:patricioescabe@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Enviar Email</span>
+        </a>
+        <a href="https://linkedin.com/in/patricio-escalona-becerra-b94a8b48" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm transition">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="CV_Patricio_Escalona_Becerra.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-medium text-sm transition">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Descargar CV (PDF)</span>
+        </a>
+      </div>
+
+      <p class="text-xs text-slate-400 font-mono">
+        © 2026 Patricio Escalona Becerra · Marbella, España
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-4 py-3 rounded-xl bg-slate-900 border border-blue-500/40 text-white text-xs shadow-2xl flex items-center gap-2">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-msg">Email copiado al portapapeles</span>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function copyEmail() {
+      navigator.clipboard.writeText('patricioescabe@gmail.com').then(() => {
+        showToast('¡Email copiado: patricioescabe@gmail.com!');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    function runCli(cmd) {
+      const output = document.getElementById('cli-output');
+      let html = '';
+
+      if (cmd === 'quien-soy') {
+        html = `
+          <div class="text-slate-400">$ <span class="text-white">./quien-soy.sh</span></div>
+          <div class="text-cyan-300 font-bold">Patricio Escalona Becerra</div>
+          <div class="text-slate-300">
+            • Rol: Full-Stack Developer & AI Application Builder.<br>
+            • Ubicación: Marbella, España (Disponible para remoto nacional/europeo).<br>
+            • Idiomas: Español (Nativo), Inglés (B2 Oficial).<br>
+            • Formación: Bootcamp HACK A BOSS (+800h) | Licenciatura CAFD (UGR) | Máster Educación (UNIR).
+          </div>
+        `;
+      } else if (cmd === 'stack') {
+        html = `
+          <div class="text-slate-400">$ <span class="text-white">./stack.sh --summary</span></div>
+          <div class="text-emerald-300 font-bold">Stack de Producción:</div>
+          <div class="text-slate-300">
+            [Frontend] JavaScript (ES6+), React 19, TypeScript, PWAs, Tailwind CSS, Recharts.<br>
+            [Backend]  Node.js, Express, Firebase Firestore & FCM, PostgreSQL, Supabase.<br>
+            [IA & ML]  Google Gemini SDK, OpenAI API, Tool Calling, Agentes con Memoria, n8n.<br>
+            [DevOps]   Git/GitHub, Vitest, Vercel, Hetzner VPS, Coolify.
+          </div>
+        `;
+      } else if (cmd === 'liderazgo') {
+        html = `
+          <div class="text-slate-400">$ <span class="text-white">./liderazgo-datos.sh</span></div>
+          <div class="text-blue-300 font-bold">Experiencia en Liderazgo & Datos (4TIUS):</div>
+          <div class="text-slate-300">
+            • Coordinación en remoto de un equipo distribuido de <strong>40 especialistas</strong>.<br>
+            • Diseño de la taxonomía y ontología de ejercicios para motores de recomendación algorítmica.<br>
+            • Implementación de protocolos de control de calidad (QA) de datos estructurados.
+          </div>
+        `;
+      } else if (cmd === 'por-que-contratar') {
+        html = `
+          <div class="text-slate-400">$ <span class="text-white">./por-que-contratar.sh</span></div>
+          <div class="text-purple-300 font-bold">Valor diferencial aportado:</div>
+          <div class="text-slate-300">
+            1. <strong>Capacidad de ejecución de producto:</strong> Experiencia construyendo aplicaciones completas con usuarios reales (Pachangapp 35+ users, 2befit Hub).<br>
+            2. <strong>Criterio de ingeniería:</strong> Bases sólidas sin atajos combinadas con velocidad multiplicada por herramientas de IA.<br>
+            3. <strong>Madurez y comunicación:</strong> Capacidad probada de gestión de personas y resolución de problemas de negocio.
+          </div>
+        `;
+      }
+
+      output.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
